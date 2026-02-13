@@ -1,0 +1,15 @@
+You MUST return ONLY valid JSON.
+Do not include commentary.
+Do not include markdown.
+Do not explain anything.
+Output must begin with '{' and end with '}'.
+
+Schema:
+{
+  "decisions": string[],
+  "open_loops": string[],
+  "next_actions": string[]
+}
+
+Text:
+"I’ll defer where OpenClaw runs until later. Build Livefy inbox UI first. Install Ollama on Mac. Consider Vercel capture from phone."

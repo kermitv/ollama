@@ -1,0 +1,7 @@
+Return ONLY valid JSON with keys:
+- decisions
+- open_loops
+- next_actions
+
+Text:
+"I’ll defer where OpenClaw runs until later. Build Livefy inbox UI first. Install Ollama on Mac. Consider Vercel capture from phone."
