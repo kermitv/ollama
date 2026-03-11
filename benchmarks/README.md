@@ -93,12 +93,12 @@ Do not label Mac-to-remote runs as Windows-local benchmarks.
 
 Use the same prompt set on every machine and host path:
 
-- `prompts/labs/01_general_summary.txt`
-- `prompts/labs/02_extraction_meeting.txt`
-- `prompts/labs/03_coding_shell.txt`
-- `prompts/labs/04_reasoning_workflow.txt`
-- `prompts/labs/05_simple_program_python.txt`
-- `prompts/labs/06_logic_debugging.txt`
+- [prompts/labs/01_general_summary.txt](../prompts/labs/01_general_summary.txt)
+- [prompts/labs/02_extraction_meeting.txt](../prompts/labs/02_extraction_meeting.txt)
+- [prompts/labs/03_coding_shell.txt](../prompts/labs/03_coding_shell.txt)
+- [prompts/labs/04_reasoning_workflow.txt](../prompts/labs/04_reasoning_workflow.txt)
+- [prompts/labs/05_simple_program_python.txt](../prompts/labs/05_simple_program_python.txt)
+- [prompts/labs/06_logic_debugging.txt](../prompts/labs/06_logic_debugging.txt)
 
 ## Output Files
 
@@ -144,4 +144,5 @@ If you later want true Windows-side memory and process metrics, collect them dir
 - [Labs Overview](../labs/README.md)
 - [Remote Windows From Mac](../labs/remote_windows_from_mac.md)
 - [Lab 07: Remote And Comparison](../labs/07_remote_and_comparison.md)
+
 

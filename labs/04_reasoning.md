@@ -35,7 +35,7 @@ Questions to ask in REPL:
 
 Script prompt:
 
-- `prompts/labs/04_reasoning_workflow.txt`
+- [prompts/labs/04_reasoning_workflow.txt](../prompts/labs/04_reasoning_workflow.txt)
 
 Suggested scripted run:
 
@@ -72,3 +72,4 @@ Exit criteria:
 
 - you can name the model you trust most for planning help
 - you can tell the difference between polished wording and actual decision quality
+

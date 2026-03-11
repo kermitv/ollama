@@ -35,7 +35,7 @@ REPL exercises:
 
 Script prompt:
 
-- `prompts/labs/05_simple_program_python.txt`
+- [prompts/labs/05_simple_program_python.txt](../prompts/labs/05_simple_program_python.txt)
 
 Suggested scripted run:
 
@@ -79,3 +79,4 @@ Exit criteria:
 
 - you can identify the model that gives you the best first draft for small utilities
 - you can describe the kinds of small programs you trust a local model to draft
+

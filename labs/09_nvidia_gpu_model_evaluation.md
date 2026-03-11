@@ -114,22 +114,22 @@ Notes:
 
 ## Prompt Set
 
-Use the prompt files in `prompts/labs/09_gpu_eval/`.
+Use the prompt files in [prompts/labs/09_gpu_eval/](../prompts/labs/09_gpu_eval/).
 They cover practical reasoning, arithmetic, instruction following, summarization, coding, troubleshooting, structured output, writing quality, and a longer comparative answer.
 
 Prompt list:
 
-1. `01_sheep_logic.txt`
-2. `02_discount_tax_math.txt`
-3. `03_docker_bullets.txt`
-4. `04_container_summary.txt`
-5. `05_is_prime_python.txt`
-6. `06_sql_left_join_explanation.txt`
-7. `07_ollama_port_conflict.txt`
-8. `08_project_checklist.txt`
-9. `09_reschedule_email.txt`
-10. `10_docker_vm_devcontainer_compare.txt`
-11. `11_json_task_report.txt`
+1. [01_sheep_logic.txt](../prompts/labs/09_gpu_eval/01_sheep_logic.txt)
+2. [02_discount_tax_math.txt](../prompts/labs/09_gpu_eval/02_discount_tax_math.txt)
+3. [03_docker_bullets.txt](../prompts/labs/09_gpu_eval/03_docker_bullets.txt)
+4. [04_container_summary.txt](../prompts/labs/09_gpu_eval/04_container_summary.txt)
+5. [05_is_prime_python.txt](../prompts/labs/09_gpu_eval/05_is_prime_python.txt)
+6. [06_sql_left_join_explanation.txt](../prompts/labs/09_gpu_eval/06_sql_left_join_explanation.txt)
+7. [07_ollama_port_conflict.txt](../prompts/labs/09_gpu_eval/07_ollama_port_conflict.txt)
+8. [08_project_checklist.txt](../prompts/labs/09_gpu_eval/08_project_checklist.txt)
+9. [09_reschedule_email.txt](../prompts/labs/09_gpu_eval/09_reschedule_email.txt)
+10. [10_docker_vm_devcontainer_compare.txt](../prompts/labs/09_gpu_eval/10_docker_vm_devcontainer_compare.txt)
+11. [11_json_task_report.txt](../prompts/labs/09_gpu_eval/11_json_task_report.txt)
 
 ## What Strong Output Looks Like
 
@@ -202,7 +202,7 @@ Prompt list:
 
 If you do not want to run all 11 prompts first, start with:
 
-1. `01_sheep_logic.txt`
+1. [01_sheep_logic.txt](../prompts/labs/09_gpu_eval/01_sheep_logic.txt)
 2. `05_is_prime_python.txt`
 3. `07_ollama_port_conflict.txt`
 4. `10_docker_vm_devcontainer_compare.txt`
@@ -236,7 +236,7 @@ You are done with this lab when:
 - you can name your default Windows GPU model and explain why
 - you can name one smaller fallback model for speed-sensitive tasks
 - you can explain whether a larger model is worth the extra VRAM and latency on your machine
-- you have updated `notes/model-comparison.md` with the conclusion
+- you have updated [notes/model-comparison.md](../notes/model-comparison.md) with the conclusion
 
 ## Suggested Follow-Up Notes
 
@@ -247,3 +247,4 @@ After you finish, add notes like:
 - best model for coding
 - best model for long structured answers
 - model that is too slow or too heavy to justify daily use
+

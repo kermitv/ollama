@@ -35,7 +35,7 @@ REPL exercises:
 
 Script prompt:
 
-- `prompts/labs/06_logic_debugging.txt`
+- [prompts/labs/06_logic_debugging.txt](../prompts/labs/06_logic_debugging.txt)
 
 Suggested scripted run:
 
@@ -78,3 +78,4 @@ Exit criteria:
 
 - you can prompt the model to get a short, useful troubleshooting plan
 - you know which local model is best for interactive debugging help
+

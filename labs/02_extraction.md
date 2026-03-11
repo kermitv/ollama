@@ -35,9 +35,9 @@ Questions to ask in REPL:
 
 Script prompts:
 
-- `prompts/labs/02_extraction_meeting.txt`
+- [prompts/labs/02_extraction_meeting.txt](../prompts/labs/02_extraction_meeting.txt)
 - `prompts/001_extraction.txt`
-- `prompts/002_extraction_strict.txt`
+- [prompts/002_extraction_strict.txt](../prompts/002_extraction_strict.txt)
 
 Suggested scripted run:
 
@@ -78,3 +78,4 @@ Exit criteria:
 
 - you can identify the best extraction model in your local set
 - you can explain how strict prompting changed output quality
+

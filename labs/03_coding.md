@@ -35,7 +35,7 @@ Questions to ask in REPL:
 
 Script prompt:
 
-- `prompts/labs/03_coding_shell.txt`
+- [prompts/labs/03_coding_shell.txt](../prompts/labs/03_coding_shell.txt)
 
 Suggested scripted run:
 
@@ -74,3 +74,4 @@ Exit criteria:
 
 - you can name a preferred coding model for shell tasks
 - you can explain why one model is stronger than another for practical code generation
+

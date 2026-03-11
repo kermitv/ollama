@@ -147,7 +147,7 @@ You want to confirm three things:
 3. The API responds.
 
 From your Mac, this repo only verifies the third item.
-If `./scripts/check_ollama.sh` fails, the likely causes are:
+If [`./scripts/check_ollama.sh`](../scripts/check_ollama.sh) fails, the likely causes are:
 
 - the Windows machine is offline in Tailscale or unreachable on the LAN
 - Ollama is not running there
@@ -169,4 +169,5 @@ You are ready to use the Windows environment remotely when:
 - you can verify the remote API from the Mac
 - you can switch between local and Windows without changing prompts
 - you can explain why you are using remote instead of local for that experiment
+
 

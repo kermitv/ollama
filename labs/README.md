@@ -224,8 +224,9 @@ For each run, capture:
 - speed
 - token efficiency
 
-Update `notes/model-comparison.md` with your conclusions after each lab.
+Update [notes/model-comparison.md](../notes/model-comparison.md) with your conclusions after each lab.
 
 If you run the advanced GPU lab, add notes on default daily-driver model, VRAM tradeoffs, and whether larger models are worth the latency on your Windows host.
+
 
 

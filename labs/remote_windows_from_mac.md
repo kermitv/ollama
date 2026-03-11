@@ -71,7 +71,7 @@ unset OLLAMA_HOST
 
 ## Helper Script Workflow
 
-If your `scripts/use_windows.sh` points at the right Windows host, you can use:
+If your [`scripts/use_windows.sh`](../scripts/use_windows.sh) points at the right Windows host, you can use:
 
 ```bash
 source ./scripts/use_windows.sh
@@ -137,4 +137,5 @@ Then keep those notes next to the saved run outputs.
 - [Lab 07: Remote And Comparison](./07_remote_and_comparison.md)
 - [Lab 08: Mode Comparison Mini-Lab](./08_mode_comparison_mini_lab.md)
 - [Benchmark Guide](../benchmarks/README.md)
+
 

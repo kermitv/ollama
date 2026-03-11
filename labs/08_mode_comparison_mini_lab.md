@@ -26,7 +26,7 @@ What you are learning:
 
 Use this exact prompt:
 
-- `prompts/labs/02_extraction_meeting.txt`
+- [prompts/labs/02_extraction_meeting.txt](../prompts/labs/02_extraction_meeting.txt)
 
 Use one exact model tag for all three runs.
 Recommended starting point:
@@ -132,3 +132,4 @@ Related docs:
 - [Lab 07: Remote And Comparison](./07_remote_and_comparison.md)
 - [Remote Windows From Mac](./remote_windows_from_mac.md)
 - [Windows Remote Guide](./windows_remote_guide.md)
+

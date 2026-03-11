@@ -43,12 +43,12 @@ ollama list
 
 What each command does:
 
-- `./scripts/serve_notes.sh` shows the local and remote workflow in one place
-- `./scripts/check_ollama.sh` verifies the HTTP API and lists installed models
+- [`./scripts/serve_notes.sh`](../scripts/serve_notes.sh) shows the local and remote workflow in one place
+- [`./scripts/check_ollama.sh`](../scripts/check_ollama.sh) verifies the HTTP API and lists installed models
 - `ollama list` confirms the local CLI sees the same models you expect
-- `.\scripts\serve_notes.ps1` and `.\scripts\check_ollama.ps1` do the same job without requiring `bash` or `jq`
+- [`.\scripts\serve_notes.ps1`](../scripts/serve_notes.ps1) and [`.\scripts\check_ollama.ps1`](../scripts/check_ollama.ps1) do the same job without requiring `bash` or `jq`
 
-If `./scripts/check_ollama.sh` fails:
+If [`./scripts/check_ollama.sh`](../scripts/check_ollama.sh) fails:
 
 - make sure Ollama is running
 - confirm port `11434` is available locally
@@ -104,3 +104,4 @@ Exit criteria:
 Optional next step:
 
 If you want to record baseline performance on your current Mac before moving deeper into the labs, use [the benchmark guide](../benchmarks/README.md).
+

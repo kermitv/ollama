@@ -35,7 +35,7 @@ Questions to ask in REPL:
 
 Script prompt:
 
-- `prompts/labs/01_general_summary.txt`
+- [prompts/labs/01_general_summary.txt](../prompts/labs/01_general_summary.txt)
 
 Suggested scripted run:
 
@@ -71,3 +71,4 @@ Exit criteria:
 
 - you can name one model you prefer for quick chat
 - you can name one model that follows constraints better than the others
+
