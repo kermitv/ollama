@@ -126,6 +126,12 @@ When you are ready to use your Windows Ollama environment over Tailscale, use th
 
 - [Windows Remote Guide](./windows_remote_guide.md)
 
+## Benchmarking
+
+When you want to compare your M1 Mac, Windows GPU host, and future Mac, use:
+
+- [Benchmark Guide](../benchmarks/README.md)
+
 ## Comparison Rubric
 
 For each run, capture:

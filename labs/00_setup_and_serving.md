@@ -86,3 +86,7 @@ Exit criteria:
 - you can list models locally
 - you can run one scripted prompt successfully
 - you can explain the difference between local CLI use and the HTTP API
+
+Optional next step:
+
+If you want to record baseline performance on your current Mac before moving deeper into the labs, use [the benchmark guide](../benchmarks/README.md).

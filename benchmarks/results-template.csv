@@ -1,0 +1,5 @@
+machine_label,host_mode,model,prompt_name,run_label,total_duration_ns,load_duration_ns,prompt_eval_count,prompt_eval_duration_ns,eval_count,eval_duration_ns,prompt_tokens_per_second,eval_tokens_per_second,system_free_percent_before,system_free_percent_after,notes
+m1-2020,local,llama3.1:8b,01_general_summary,cold,,,,,,,,,,,
+m1-2020,local,llama3.1:8b,01_general_summary,warm,,,,,,,,,,,
+windows-gpu,remote,llama3.1:8b,01_general_summary,warm,,,,,,,,,,,
+m5-max,local,llama3.1:8b,01_general_summary,warm,,,,,,,,,,,
