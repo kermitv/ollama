@@ -1,0 +1,11 @@
+You are evaluating a local language model.
+
+Task:
+Summarize the purpose of an Ollama learning repo for a new developer.
+
+Constraints:
+- Use exactly 5 bullet points
+- Each bullet must be 1 sentence
+- Mention local-first development
+- Mention remote hosts as a later step
+- Do not use markdown headings

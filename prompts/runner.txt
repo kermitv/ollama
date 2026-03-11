@@ -1,0 +1,9 @@
+./scripts/run.sh phi3 prompts/001_extraction.txt
+./scripts/run.sh llama3.1:8b prompts/001_extraction.txt
+./scripts/run.sh deepseek-coder:6.7b prompts/001_extraction.txt
+
+./scripts/run.sh phi3 prompts/002_extraction_strict.txt
+./scripts/run.sh llama3.1:8b prompts/002_extraction_strict.txt
+./scripts/run.sh deepseek-coder:6.7b prompts/002_extraction_strict.txt
+
+./scripts/run_cloud.sh deepseek-coder:6.7b prompts/001_extraction.txt

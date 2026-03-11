@@ -1,0 +1,13 @@
+Return ONLY valid JSON.
+Do not include commentary.
+Do not include markdown.
+
+Schema:
+{
+  "decisions": string[],
+  "blockers": string[],
+  "next_actions": string[]
+}
+
+Text:
+"We will prototype with Ollama on laptop first. Do not deploy anything yet. Sarah will test llama3.1:8b for support workflows this week. We still need to choose between phi3 and llama3.1:8b for extraction. The remote GPU box is available later if local latency is too slow. Capture one coding benchmark with deepseek-coder before Friday."

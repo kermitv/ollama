@@ -1,0 +1,10 @@
+You are advising a developer who wants to learn local LLM workflows offline first.
+
+Task:
+Recommend a practical progression from local-only experimentation to remote-host usage.
+
+Constraints:
+- Provide exactly 3 phases
+- Each phase must include: goal, tools, risk, and exit criterion
+- Keep the answer under 220 words
+- Avoid vague advice

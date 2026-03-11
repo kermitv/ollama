@@ -1,0 +1,15 @@
+You are helping a developer reason through a bug before coding.
+
+Task:
+Given the symptom below, provide:
+- 3 likely causes
+- 3 diagnostic steps
+- 1 recommended next action
+
+Constraints:
+- keep it concrete
+- no filler
+- do not suggest more than 3 causes
+
+Symptom:
+"A Bash script that calls a local Ollama server works in one terminal but fails in another with connection refused on localhost:11434."

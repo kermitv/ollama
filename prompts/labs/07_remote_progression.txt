@@ -1,0 +1,13 @@
+You are advising a developer moving from local-only model usage to remote-host usage.
+
+Task:
+Provide a practical progression with:
+- local-only setup
+- remote-host validation
+- hybrid day-to-day workflow
+
+Constraints:
+- use exactly 3 numbered sections
+- each section must include one command example
+- focus on Ollama-based workflows
+- keep the answer under 250 words

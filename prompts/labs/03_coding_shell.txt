@@ -1,0 +1,14 @@
+You are writing code for a local LLM lab.
+
+Task:
+Write a Bash script called `ask_ollama.sh` that:
+- accepts `model` and `prompt_file`
+- reads the prompt file contents
+- sends a non-streaming request to `http://localhost:11434/api/generate`
+- saves the plain-text response to `runs/`
+- exits with an error if the prompt file is missing
+
+Constraints:
+- use `set -euo pipefail`
+- assume `jq` is installed
+- output only the script
