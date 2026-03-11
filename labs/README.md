@@ -20,6 +20,25 @@ Use the models already listed in the repo:
 7. [Lab 06: Logic And Debugging](./06_logic_and_debugging.md)
 8. [Lab 07: Remote And Comparison](./07_remote_and_comparison.md)
 
+## How To Use This Curriculum
+
+Each lab should be done in order the first time through.
+
+- Start with the terminal commands in the lab.
+- Run at least one exercise in REPL mode.
+- Run at least one scripted prompt and save the output.
+- Record what model performed best for that task.
+- Do not move on until you can explain what changed between models.
+
+Each lab now includes:
+
+- what you are learning
+- why the lab matters
+- exact commands to run
+- what strong output looks like
+- common failure modes
+- exit criteria for moving forward
+
 ## Terminal Entry Points
 
 Check serving:
@@ -66,6 +85,20 @@ OLLAMA_HOST=http://<host>:11434 ./scripts/run_matrix.sh prompts/labs/07_remote_p
 - how to use models for coding and small program generation
 - how to ask for logic help, debugging ideas, and next-step suggestions
 - how to move from local-only use to remote-host workflows
+
+## Suggested Learning Pace
+
+- Lab 00 to Lab 02: one focused session
+- Lab 03 to Lab 06: one or two sessions depending on how much you code
+- Lab 07: do this only after you are comfortable with local-only runs
+
+If you only want the shortest useful path, do:
+
+1. Lab 00
+2. Lab 02
+3. Lab 03
+4. Lab 06
+5. Lab 07
 
 ## Comparison Rubric
 
