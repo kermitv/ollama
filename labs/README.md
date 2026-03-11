@@ -25,7 +25,7 @@ Use this when:
 - you want to run the same labs directly from PowerShell
 - you want native Windows timings without a Mac client in the loop
 
-Use the PowerShell scripts added for Lab 00 and extend that pattern as needed for later labs.
+The repo already includes PowerShell entry points for serving checks, single runs, REPL usage, and multi-model scripted runs.
 
 ### 3. Mac client -> remote Windows Ollama
 
@@ -99,7 +99,8 @@ If you copied the repo to Windows and want to stay fully local on Windows:
 1. Start with [Lab 00: Setup And Serving](./00_setup_and_serving.md)
 2. Use the PowerShell commands where provided
 3. Keep `OLLAMA_HOST` pointed at `http://localhost:11434` unless you are intentionally testing a remote machine
-4. Treat later `.sh` examples as the Unix equivalents of the same workflow
+4. Use `.\scripts\repl.ps1` for interactive work and `.\scripts\run_matrix.ps1` for scripted comparisons
+5. Treat any remaining `.sh` examples as the Unix equivalents of the same workflow
 
 ## Terminal Entry Points
 
@@ -149,6 +150,19 @@ Single scripted run:
 .\scripts\run.ps1 llama3.1:8b prompts/labs/01_general_summary.txt
 ```
 
+REPL mode:
+
+```powershell
+.\scripts\repl.ps1 phi3 general
+.\scripts\repl.ps1 llama3.1:8b extraction
+```
+
+Multi-model comparison:
+
+```powershell
+.\scripts\run_matrix.ps1 prompts/labs/02_extraction_meeting.txt
+```
+
 ## Remote Windows From Mac
 
 When you want to run the labs from your Mac against Ollama on the Windows machine, use:
@@ -189,6 +203,9 @@ If you only want the shortest useful path, do:
 When you want to compare your M1 Mac, Windows GPU host, and future Mac, use:
 
 - [Benchmark Guide](../benchmarks/README.md)
+
+The benchmark scripts in this repo are shell-based today, so benchmark automation is documented for Mac local and Mac-to-remote-host paths.
+If you want true Windows-local benchmark numbers, either run equivalent shell tooling there or add a PowerShell benchmark script first.
 
 ## Comparison Rubric
 

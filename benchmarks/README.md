@@ -3,7 +3,6 @@
 This repo includes a lightweight benchmark workflow for comparing:
 
 - your MacBook Pro M1 2020 running Ollama locally
-- your Windows GPU box running Ollama locally
 - your Mac acting as a client to the Windows box over LAN or Tailscale
 - your future MacBook Pro M5 Max 128 GB
 
@@ -19,12 +18,7 @@ Keep these benchmark modes separate because they mean different things.
 This measures local inference on the Mac itself.
 Use this when you want the cleanest baseline.
 
-### 2. Local Windows benchmark
-
-This measures local inference on the Windows box itself.
-Use this when you want the Windows machine's own performance without a remote client in the loop.
-
-### 3. Mac -> remote Windows benchmark
+### 2. Mac -> remote Windows benchmark
 
 This measures end-to-end experience from the Mac while Ollama runs on Windows.
 Use this when you care about practical remote usage over LAN or Tailscale.
@@ -91,8 +85,9 @@ OLLAMA_HOST=http://100.76.113.128:11434 ./scripts/benchmark_matrix.sh prompts/la
 
 ### Windows local benchmark
 
-Run the same benchmark scripts from the Windows machine itself if you want true Windows-local numbers.
-Those results should be labeled separately from remote-client measurements.
+This repo does not currently include a PowerShell benchmark script.
+If you want true Windows-local numbers, add a Windows-native benchmark path or run equivalent shell tooling in a compatible Unix environment on that machine.
+Do not label Mac-to-remote runs as Windows-local benchmarks.
 
 ## Suggested Prompt Set
 
@@ -149,3 +144,4 @@ If you later want true Windows-side memory and process metrics, collect them dir
 - [Labs Overview](../labs/README.md)
 - [Remote Windows From Mac](../labs/remote_windows_from_mac.md)
 - [Lab 07: Remote And Comparison](../labs/07_remote_and_comparison.md)
+

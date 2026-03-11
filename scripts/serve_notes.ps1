@@ -18,10 +18,11 @@ Remote serve workflow:
   3. Point this repo at the remote host:
        $env:OLLAMA_HOST="http://<host>:11434"; .\scripts\check_ollama.ps1
   4. Run the same labs without changing prompts:
-       $env:OLLAMA_HOST="http://<host>:11434"; .\scripts\run_matrix.sh prompts/labs/02_extraction_meeting.txt
+       $env:OLLAMA_HOST="http://<host>:11434"; .\scripts\run_matrix.ps1 prompts/labs/02_extraction_meeting.txt
 
 Comparison habit:
   - Use the same prompt across multiple models.
   - Save all outputs under runs/.
   - Record winners by task type in notes/model-comparison.md.
 ''@
+

@@ -66,20 +66,21 @@ Structure:
 
 ## Execution Modes
 
-This repo supports three distinct modes of use:
+This repo supports three distinct modes of use for lab runs:
 
 - Mac local -> Mac Ollama
 - Windows local -> Windows Ollama
 - Mac client -> remote Windows Ollama over LAN or Tailscale
 
-Those modes should be documented and benchmarked separately because they measure different things.
+Those modes should be documented separately because they measure different things.
+Benchmark automation in this repo currently covers Mac local and Mac-to-remote-host runs.
 
 Usage:
 - Local Ollama on Mac or Linux: `./scripts/run.sh llama3.1:8b prompts/001_extraction.txt`
 - Local Ollama on Windows PowerShell: `.\scripts\run.ps1 llama3.1:8b prompts/labs/01_general_summary.txt`
 - Remote Ollama from a Mac client: set `OLLAMA_HOST=http://<host>:11434`
 - Remote Ollama via `.env.win`: `OLLAMA_USE_ENV_WIN=1 ./scripts/run.sh llama3.1:8b prompts/001_extraction.txt`
-- Cloud comparison: `./scripts/run_cloud.sh prompts/001_extraction.txt`
+- Cloud comparison from Mac or Linux: `./scripts/run_cloud.sh prompts/001_extraction.txt`
 - Guided labs: start with `labs/README.md`
 
 Suggested progression:
@@ -107,3 +108,4 @@ If you open issues or pull requests, high-signal contributions are preferred ove
 - include concrete machine, model, and host context when sharing results
 
 This lab is isolated from production projects, but it is intentionally public so other developers can compare notes, prompts, hardware, and workflow tradeoffs.
+
