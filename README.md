@@ -82,6 +82,7 @@ Usage:
 - Remote Ollama via `.env.win`: `OLLAMA_USE_ENV_WIN=1 ./scripts/run.sh llama3.1:8b prompts/001_extraction.txt`
 - Cloud comparison from Mac or Linux: `./scripts/run_cloud.sh prompts/001_extraction.txt`
 - Guided labs: start with `labs/README.md`
+- Optional advanced GPU lab: `labs/09_nvidia_gpu_model_evaluation.md`
 
 Suggested progression:
 - Verify serving locally first
@@ -108,4 +109,5 @@ If you open issues or pull requests, high-signal contributions are preferred ove
 - include concrete machine, model, and host context when sharing results
 
 This lab is isolated from production projects, but it is intentionally public so other developers can compare notes, prompts, hardware, and workflow tradeoffs.
+
 

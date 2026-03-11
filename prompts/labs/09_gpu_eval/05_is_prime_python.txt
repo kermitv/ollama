@@ -1,0 +1,1 @@
+Write a Python function named is_prime(n) that returns True if n is prime and False otherwise. Include brief comments and 3 example test calls.

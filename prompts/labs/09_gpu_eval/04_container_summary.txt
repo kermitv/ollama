@@ -1,0 +1,3 @@
+Summarize this in 3 sentences for a non-technical manager:
+
+"Containerization packages an application with its dependencies into a consistent unit that can run across environments. This reduces drift between developer workstations, CI pipelines, and production servers. It also improves reproducibility, onboarding speed, and rollback reliability."

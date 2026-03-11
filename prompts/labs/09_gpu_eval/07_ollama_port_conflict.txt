@@ -1,0 +1,4 @@
+I ran ''ollama serve'' on Windows and got:
+Error: listen tcp 0.0.0.0:11434: bind: Only one usage of each socket address is normally permitted.
+
+Explain the most likely cause and the fix in plain English.

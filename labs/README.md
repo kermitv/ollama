@@ -56,6 +56,12 @@ Use the models already listed in the repo:
 8. [Lab 07: Remote And Comparison](./07_remote_and_comparison.md)
 9. [Lab 08: Mode Comparison Mini-Lab](./08_mode_comparison_mini_lab.md)
 
+## Advanced Labs
+
+These are optional labs for hardware-specific evaluation after the core path.
+
+- [Lab 09: NVIDIA GPU Model Evaluation](./09_nvidia_gpu_model_evaluation.md)
+
 ## How To Use This Curriculum
 
 Each lab should be done in order the first time through.
@@ -219,4 +225,7 @@ For each run, capture:
 - token efficiency
 
 Update `notes/model-comparison.md` with your conclusions after each lab.
+
+If you run the advanced GPU lab, add notes on default daily-driver model, VRAM tradeoffs, and whether larger models are worth the latency on your Windows host.
+
 

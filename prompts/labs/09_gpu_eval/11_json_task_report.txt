@@ -1,0 +1,19 @@
+Return valid JSON only.
+
+Summarize the following deployment task as an object with exactly these keys:
+- task_name
+- priority
+- risks
+- required_tools
+- next_step
+
+Task details:
+- Containerize a Python API
+- Run it on both Mac and Windows
+- Keep secrets out of Git
+- Add README setup steps
+- Use Docker Compose if multiple services are needed
+- Priority should be high
+- Main risks are credential leaks and environment drift
+- Required tools should include Docker, Git, and Python
+- The next step should be the first practical thing to do

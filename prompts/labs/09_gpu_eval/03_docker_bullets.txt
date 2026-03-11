@@ -1,0 +1,1 @@
+Write exactly 5 bullet points about the advantages of Docker for local development. Each bullet must be under 12 words. Do not add any intro or conclusion.

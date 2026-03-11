@@ -1,0 +1,5 @@
+Compare Docker, virtual machines, and dev containers for a solo developer working on a Python project across Mac and Windows. Give:
+1. a short overview
+2. a comparison table
+3. a recommendation
+4. one caution for each option

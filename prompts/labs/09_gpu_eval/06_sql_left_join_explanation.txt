@@ -1,0 +1,6 @@
+Explain what this SQL query does in plain English and identify one possible problem with it:
+
+SELECT c.customer_id, o.order_id
+FROM Customers c
+LEFT JOIN Orders o ON c.customer_id = o.customer_id
+WHERE o.order_date >= ''2026-01-01'';

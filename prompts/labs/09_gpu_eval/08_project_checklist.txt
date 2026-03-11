@@ -1,0 +1,10 @@
+Read these requirements and then produce a numbered checklist only:
+
+- Project must use Docker
+- Source code must be in Git
+- Secrets cannot be committed
+- Must run on Mac and Windows
+- README must include setup steps
+- Use Python where appropriate
+
+Now produce a checklist for starting this project.
