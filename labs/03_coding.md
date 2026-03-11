@@ -20,6 +20,13 @@ Recommended setup:
 ./scripts/repl.sh llama3.1:8b coding
 ```
 
+Windows PowerShell:
+
+```powershell
+.\scripts\repl.ps1 deepseek-coder:6.7b coding
+.\scripts\repl.ps1 llama3.1:8b coding
+```
+
 Questions to ask in REPL:
 
 - "Write a Bash helper that posts a prompt to Ollama and stores the response."
@@ -34,6 +41,12 @@ Suggested scripted run:
 
 ```bash
 ./scripts/run_matrix.sh prompts/labs/03_coding_shell.txt "deepseek-coder:6.7b,llama3.1:8b,gpt-oss:20b"
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\run_matrix.ps1 prompts/labs/03_coding_shell.txt "deepseek-coder:6.7b,llama3.1:8b,gpt-oss:20b"
 ```
 
 What to compare:

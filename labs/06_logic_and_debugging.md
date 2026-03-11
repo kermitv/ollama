@@ -20,6 +20,13 @@ Recommended setup:
 ./scripts/repl.sh llama3.1:8b reasoning
 ```
 
+Windows PowerShell:
+
+```powershell
+.\scripts\repl.ps1 phi3 reasoning
+.\scripts\repl.ps1 llama3.1:8b reasoning
+```
+
 REPL exercises:
 
 - "Why would localhost work in one shell and fail in another?"
@@ -34,6 +41,12 @@ Suggested scripted run:
 
 ```bash
 ./scripts/run_matrix.sh prompts/labs/06_logic_debugging.txt
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\run_matrix.ps1 prompts/labs/06_logic_debugging.txt
 ```
 
 What to compare:

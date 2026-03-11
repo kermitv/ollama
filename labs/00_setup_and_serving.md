@@ -23,8 +23,6 @@ What you are learning:
 Prerequisites:
 
 - `ollama` installed
-- `curl` installed
-- `jq` installed
 - at least one pulled model
 
 Terminal steps:
@@ -35,11 +33,20 @@ Terminal steps:
 ollama list
 ```
 
+Windows PowerShell steps:
+
+```powershell
+.\scripts\serve_notes.ps1
+.\scripts\check_ollama.ps1
+ollama list
+```
+
 What each command does:
 
 - `./scripts/serve_notes.sh` shows the local and remote workflow in one place
 - `./scripts/check_ollama.sh` verifies the HTTP API and lists installed models
 - `ollama list` confirms the local CLI sees the same models you expect
+- `.\scripts\serve_notes.ps1` and `.\scripts\check_ollama.ps1` do the same job without requiring `bash` or `jq`
 
 If `./scripts/check_ollama.sh` fails:
 
@@ -62,6 +69,12 @@ First exercise:
 ./scripts/run.sh llama3.1:8b prompts/labs/01_general_summary.txt
 ```
 
+Windows PowerShell:
+
+```powershell
+.\scripts\run.ps1 llama3.1:8b prompts/labs/01_general_summary.txt
+```
+
 What to observe:
 
 - Is the server running?
@@ -80,6 +93,7 @@ Common mistakes:
 - Ollama app not started
 - assuming a model is installed because it exists on another machine
 - mixing local CLI usage with a remote `OLLAMA_HOST` without noticing
+- copying the repo to Windows and trying to run `.sh` scripts directly in PowerShell
 
 Exit criteria:
 

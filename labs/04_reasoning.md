@@ -20,6 +20,13 @@ Recommended setup:
 ./scripts/repl.sh llama3.1:8b reasoning
 ```
 
+Windows PowerShell:
+
+```powershell
+.\scripts\repl.ps1 gpt-oss:20b reasoning
+.\scripts\repl.ps1 llama3.1:8b reasoning
+```
+
 Questions to ask in REPL:
 
 - "Plan a local-first workflow for learning LLM tooling offline."
@@ -34,6 +41,12 @@ Suggested scripted run:
 
 ```bash
 ./scripts/run_matrix.sh prompts/labs/04_reasoning_workflow.txt
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\run_matrix.ps1 prompts/labs/04_reasoning_workflow.txt
 ```
 
 What to compare:

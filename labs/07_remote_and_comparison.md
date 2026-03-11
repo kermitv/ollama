@@ -35,6 +35,16 @@ source ./scripts/use_windows.sh
 source ./scripts/use_local.sh
 ```
 
+Windows PowerShell local override example:
+
+```powershell
+$env:OLLAMA_HOST='http://100.76.113.128:11434'
+.\scripts\check_ollama.ps1
+.\scripts\run.ps1 llama3.1:8b prompts/labs/02_extraction_meeting.txt
+.\scripts\run_matrix.ps1 prompts/labs/07_remote_progression.txt
+Remove-Item Env:OLLAMA_HOST
+```
+
 Step-by-step approach:
 
 1. Verify the remote host answers `/api/tags`.
@@ -47,6 +57,13 @@ Convenience flow for your Windows box:
 ```bash
 source ./scripts/use_windows.sh
 ./scripts/check_ollama.sh
+```
+
+Mac shell with explicit remote host:
+
+```bash
+OLLAMA_HOST=http://100.76.113.128:11434 ./scripts/check_ollama.sh
+OLLAMA_HOST=http://100.76.113.128:11434 ./scripts/run_matrix.sh prompts/labs/07_remote_progression.txt
 ```
 
 What to compare:

@@ -20,6 +20,13 @@ Recommended setup:
 ./scripts/repl.sh gpt-oss:20b coding
 ```
 
+Windows PowerShell:
+
+```powershell
+.\scripts\repl.ps1 deepseek-coder:6.7b coding
+.\scripts\repl.ps1 gpt-oss:20b coding
+```
+
 REPL exercises:
 
 - "Write a Python CLI that tracks todos in a JSON file."
@@ -34,6 +41,12 @@ Suggested scripted run:
 
 ```bash
 ./scripts/run_matrix.sh prompts/labs/05_simple_program_python.txt "deepseek-coder:6.7b,llama3.1:8b,gpt-oss:20b"
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\run_matrix.ps1 prompts/labs/05_simple_program_python.txt "deepseek-coder:6.7b,llama3.1:8b,gpt-oss:20b"
 ```
 
 What to compare:

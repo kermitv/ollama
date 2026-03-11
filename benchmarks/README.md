@@ -2,12 +2,32 @@
 
 This repo includes a lightweight benchmark workflow for comparing:
 
-- your MacBook Pro M1 2020
-- your Windows GPU box over Tailscale
+- your MacBook Pro M1 2020 running Ollama locally
+- your Windows GPU box running Ollama locally
+- your Mac acting as a client to the Windows box over LAN or Tailscale
 - your future MacBook Pro M5 Max 128 GB
 
 The goal is not just raw speed.
 You want to compare latency, throughput, load cost, and usability on the same prompts.
+
+## Benchmark Modes
+
+Keep these benchmark modes separate because they mean different things.
+
+### 1. Local Mac benchmark
+
+This measures local inference on the Mac itself.
+Use this when you want the cleanest baseline.
+
+### 2. Local Windows benchmark
+
+This measures local inference on the Windows box itself.
+Use this when you want the Windows machine's own performance without a remote client in the loop.
+
+### 3. Mac -> remote Windows benchmark
+
+This measures end-to-end experience from the Mac while Ollama runs on Windows.
+Use this when you care about practical remote usage over LAN or Tailscale.
 
 ## What The Scripts Record
 
@@ -34,7 +54,7 @@ When you point at a remote host, the script marks memory as unavailable because 
 
 ## Recommended Benchmark Times
 
-For each machine, benchmark at these moments:
+For each machine or host path, benchmark at these moments:
 
 1. Cold run on a model after it has not been used recently
 2. Warm run on the same model immediately afterward
@@ -48,30 +68,35 @@ That lets you separate:
 
 ## Commands
 
-Single benchmark:
+### Local Mac benchmark
 
 ```bash
 ./scripts/benchmark.sh llama3.1:8b prompts/labs/01_general_summary.txt m1-2020 cold
 ./scripts/benchmark.sh llama3.1:8b prompts/labs/01_general_summary.txt m1-2020 warm
 ```
 
-Multi-model benchmark:
+### Mac -> remote Windows over LAN
 
 ```bash
-./scripts/benchmark_matrix.sh prompts/labs/02_extraction_meeting.txt m1-2020 warm
+OLLAMA_HOST=http://192.168.1.50:11434 ./scripts/benchmark.sh llama3.1:8b prompts/labs/01_general_summary.txt windows-lan cold
+OLLAMA_HOST=http://192.168.1.50:11434 ./scripts/benchmark_matrix.sh prompts/labs/02_extraction_meeting.txt windows-lan warm
 ```
 
-Windows later:
+### Mac -> remote Windows over Tailscale
 
 ```bash
-source ./scripts/use_windows.sh
-./scripts/benchmark_matrix.sh prompts/labs/02_extraction_meeting.txt windows-gpu warm
-source ./scripts/use_local.sh
+OLLAMA_HOST=http://100.76.113.128:11434 ./scripts/benchmark.sh llama3.1:8b prompts/labs/01_general_summary.txt windows-ts cold
+OLLAMA_HOST=http://100.76.113.128:11434 ./scripts/benchmark_matrix.sh prompts/labs/02_extraction_meeting.txt windows-ts warm
 ```
+
+### Windows local benchmark
+
+Run the same benchmark scripts from the Windows machine itself if you want true Windows-local numbers.
+Those results should be labeled separately from remote-client measurements.
 
 ## Suggested Prompt Set
 
-Use the same prompt set on every machine:
+Use the same prompt set on every machine and host path:
 
 - `prompts/labs/01_general_summary.txt`
 - `prompts/labs/02_extraction_meeting.txt`
@@ -88,9 +113,13 @@ That directory is gitignored so you can keep machine-specific results locally wi
 
 ## How To Compare Machines
 
-Record at least these attributes for every machine:
+Record at least these attributes for every machine or host path:
 
 - machine label
+- client machine
+- server machine
+- local or remote
+- LAN or Tailscale when remote
 - OS
 - RAM
 - Ollama version
@@ -106,11 +135,17 @@ Use [results-template.csv](./results-template.csv) as a manual summary sheet.
 
 ## Important Caveat For Remote Runs
 
-When you benchmark the Windows machine over Tailscale, the measured latency includes network overhead.
+When you benchmark the Windows machine from the Mac over LAN or Tailscale, the measured latency includes network overhead.
 
-So keep two ideas separate:
+So keep these ideas separate:
 
 - remote end-to-end experience from the Mac
 - true model throughput on the Windows box
 
 If you later want true Windows-side memory and process metrics, collect them directly on the Windows host.
+
+## Related Docs
+
+- [Labs Overview](../labs/README.md)
+- [Remote Windows From Mac](../labs/remote_windows_from_mac.md)
+- [Lab 07: Remote And Comparison](../labs/07_remote_and_comparison.md)

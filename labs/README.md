@@ -2,9 +2,40 @@
 
 These labs are organized as a natural progression from setup to serving to model comparison and practical use.
 
-If your current goal is learning with local models on your Mac, stay local through Lab 06.
-Do not worry about the Windows environment yet.
-Treat the Windows/Tailscale path as an advanced follow-up only when you are ready to compare local and remote execution.
+The repo now has three distinct ways to run the labs.
+Keep them conceptually separate because they answer different questions.
+
+## Execution Modes
+
+### 1. Mac local -> Mac Ollama
+
+Use this when:
+
+- you want the simplest path
+- you are learning prompt behavior
+- you want to measure local model performance without network effects
+
+This is the default path through Lab 06.
+
+### 2. Windows local -> Windows Ollama
+
+Use this when:
+
+- you copied the repo onto Windows
+- you want to run the same labs directly from PowerShell
+- you want native Windows timings without a Mac client in the loop
+
+Use the PowerShell scripts added for Lab 00 and extend that pattern as needed for later labs.
+
+### 3. Mac client -> remote Windows Ollama
+
+Use this when:
+
+- you want to compare your Mac against a Windows GPU host
+- you want to keep the prompts and workflow the same while changing only the host
+- you want to measure remote end-to-end experience over LAN or Tailscale
+
+This is the path for Lab 07 and the benchmark guide.
 
 Use the models already listed in the repo:
 
@@ -23,6 +54,7 @@ Use the models already listed in the repo:
 6. [Lab 05: Simple Programs](./05_simple_programs.md)
 7. [Lab 06: Logic And Debugging](./06_logic_and_debugging.md)
 8. [Lab 07: Remote And Comparison](./07_remote_and_comparison.md)
+9. [Lab 08: Mode Comparison Mini-Lab](./08_mode_comparison_mini_lab.md)
 
 ## How To Use This Curriculum
 
@@ -34,7 +66,7 @@ Each lab should be done in order the first time through.
 - Record what model performed best for that task.
 - Do not move on until you can explain what changed between models.
 
-Each lab now includes:
+Each lab includes:
 
 - what you are learning
 - why the lab matters
@@ -43,9 +75,11 @@ Each lab now includes:
 - common failure modes
 - exit criteria for moving forward
 
-## Local-Only Path First
+## Local-First Paths
 
-If you are learning local models right now, use this path:
+### Mac local path
+
+If you are learning local models on your Mac, use this path:
 
 1. [Lab 00: Setup And Serving](./00_setup_and_serving.md)
 2. [Lab 01: General Chat](./01_general_chat.md)
@@ -56,8 +90,20 @@ If you are learning local models right now, use this path:
 7. [Lab 06: Logic And Debugging](./06_logic_and_debugging.md)
 
 Only move to [Lab 07: Remote And Comparison](./07_remote_and_comparison.md) after you are comfortable with local runs.
+Use [Lab 08: Mode Comparison Mini-Lab](./08_mode_comparison_mini_lab.md) when you want one fixed side-by-side exercise across all three execution modes.
+
+### Windows local path
+
+If you copied the repo to Windows and want to stay fully local on Windows:
+
+1. Start with [Lab 00: Setup And Serving](./00_setup_and_serving.md)
+2. Use the PowerShell commands where provided
+3. Keep `OLLAMA_HOST` pointed at `http://localhost:11434` unless you are intentionally testing a remote machine
+4. Treat later `.sh` examples as the Unix equivalents of the same workflow
 
 ## Terminal Entry Points
+
+### Mac or Linux shell
 
 Check serving:
 
@@ -87,14 +133,30 @@ Multi-model comparison:
 ./scripts/run_matrix.sh prompts/labs/02_extraction_meeting.txt
 ```
 
-Remote host comparison:
+### Windows PowerShell
 
-```bash
-source ./scripts/use_windows.sh
-./scripts/check_ollama.sh
-./scripts/run_matrix.sh prompts/labs/07_remote_progression.txt
-source ./scripts/use_local.sh
+Check serving:
+
+```powershell
+.\scripts\serve_notes.ps1
+.\scripts\check_ollama.ps1
+ollama list
 ```
+
+Single scripted run:
+
+```powershell
+.\scripts\run.ps1 llama3.1:8b prompts/labs/01_general_summary.txt
+```
+
+## Remote Windows From Mac
+
+When you want to run the labs from your Mac against Ollama on the Windows machine, use:
+
+- [Windows Remote Guide](./windows_remote_guide.md)
+- [Remote Windows From Mac](./remote_windows_from_mac.md)
+- [Lab 07: Remote And Comparison](./07_remote_and_comparison.md)
+- [Lab 08: Mode Comparison Mini-Lab](./08_mode_comparison_mini_lab.md)
 
 ## What The Labs Teach
 
@@ -105,12 +167,13 @@ source ./scripts/use_local.sh
 - how to use models for coding and small program generation
 - how to ask for logic help, debugging ideas, and next-step suggestions
 - how to move from local-only use to remote-host workflows
+- how to compare Mac local, Windows local, and Mac-to-Windows remote runs with one fixed prompt
 
 ## Suggested Learning Pace
 
 - Lab 00 to Lab 02: one focused session
 - Lab 03 to Lab 06: one or two sessions depending on how much you code
-- Lab 07: do this only after you are comfortable with local-only runs
+- Lab 07 to Lab 08: do this only after you are comfortable with local-only runs
 
 If you only want the shortest useful path, do:
 
@@ -119,12 +182,7 @@ If you only want the shortest useful path, do:
 3. Lab 03
 4. Lab 06
 5. Lab 07
-
-## Windows Later
-
-When you are ready to use your Windows Ollama environment over Tailscale, use the separate guide:
-
-- [Windows Remote Guide](./windows_remote_guide.md)
+6. Lab 08
 
 ## Benchmarking
 
@@ -144,3 +202,4 @@ For each run, capture:
 - token efficiency
 
 Update `notes/model-comparison.md` with your conclusions after each lab.
+

@@ -20,6 +20,13 @@ Recommended setup:
 ./scripts/repl.sh llama3.1:8b general
 ```
 
+Windows PowerShell:
+
+```powershell
+.\scripts\repl.ps1 phi3 general
+.\scripts\repl.ps1 llama3.1:8b general
+```
+
 Questions to ask in REPL:
 
 - "Summarize this repo in four bullets."
@@ -34,6 +41,12 @@ Suggested scripted run:
 
 ```bash
 ./scripts/run_matrix.sh prompts/labs/01_general_summary.txt
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\run_matrix.ps1 prompts/labs/01_general_summary.txt
 ```
 
 What to compare:

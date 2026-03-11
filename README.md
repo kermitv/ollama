@@ -64,25 +64,38 @@ Structure:
 - labs/      → Guided REPL and script exercises
 - benchmarks/ → Repeatable machine and host comparisons
 
+## Execution Modes
+
+This repo supports three distinct modes of use:
+
+- Mac local -> Mac Ollama
+- Windows local -> Windows Ollama
+- Mac client -> remote Windows Ollama over LAN or Tailscale
+
+Those modes should be documented and benchmarked separately because they measure different things.
+
 Usage:
-- Local Ollama: `./scripts/run.sh llama3.1:8b prompts/001_extraction.txt`
-- Remote Ollama: set `OLLAMA_HOST=http://<host>:11434`
+- Local Ollama on Mac or Linux: `./scripts/run.sh llama3.1:8b prompts/001_extraction.txt`
+- Local Ollama on Windows PowerShell: `.\scripts\run.ps1 llama3.1:8b prompts/labs/01_general_summary.txt`
+- Remote Ollama from a Mac client: set `OLLAMA_HOST=http://<host>:11434`
 - Remote Ollama via `.env.win`: `OLLAMA_USE_ENV_WIN=1 ./scripts/run.sh llama3.1:8b prompts/001_extraction.txt`
 - Cloud comparison: `./scripts/run_cloud.sh prompts/001_extraction.txt`
 - Guided labs: start with `labs/README.md`
 
 Suggested progression:
-- Verify serving: `./scripts/check_ollama.sh`
-- Learn local REPL use: `./scripts/repl.sh phi3 general`
-- Compare models on one task: `./scripts/run_matrix.sh prompts/labs/02_extraction_meeting.txt`
-- Practice coding and logic labs: see `labs/05_simple_programs.md` and `labs/06_logic_and_debugging.md`
+- Verify serving locally first
+- Learn local REPL use
+- Compare models on one task locally
+- Practice coding and logic labs locally
 - Move to remote-host runs later with `OLLAMA_HOST=http://<host>:11434`
 
 ## Start Here
 
-- If you want the learning path, start with [labs/README.md](/Users/kermitv/dev/labs/ollama/labs/README.md#L1)
-- If you want machine comparisons, use [benchmarks/README.md](/Users/kermitv/dev/labs/ollama/benchmarks/README.md#L1)
-- If you want the shortest first command, run `./scripts/check_ollama.sh`
+- If you want the learning path, start with [labs/README.md](c:\dev\projects\ollama\labs\README.md)
+- If you want the remote workflow from Mac to Windows, use [labs/remote_windows_from_mac.md](c:\dev\projects\ollama\labs\remote_windows_from_mac.md)
+- If you want machine comparisons, use [benchmarks/README.md](c:\dev\projects\ollama\benchmarks\README.md)
+- If you want the shortest first command on Mac or Linux, run `./scripts/check_ollama.sh`
+- If you want the shortest first command on Windows PowerShell, run `.\scripts\check_ollama.ps1`
 
 ## Contributing
 

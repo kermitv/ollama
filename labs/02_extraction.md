@@ -20,6 +20,13 @@ Recommended setup:
 ./scripts/repl.sh llama3.1:8b extraction
 ```
 
+Windows PowerShell:
+
+```powershell
+.\scripts\repl.ps1 phi3 extraction
+.\scripts\repl.ps1 llama3.1:8b extraction
+```
+
 Questions to ask in REPL:
 
 - "Extract decisions, blockers, and next actions from this note."
@@ -37,6 +44,13 @@ Suggested scripted run:
 ```bash
 ./scripts/run_matrix.sh prompts/labs/02_extraction_meeting.txt
 ./scripts/run_matrix.sh prompts/002_extraction_strict.txt
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\run_matrix.ps1 prompts/labs/02_extraction_meeting.txt
+.\scripts\run_matrix.ps1 prompts/002_extraction_strict.txt
 ```
 
 What to compare:
