@@ -26,7 +26,8 @@ Structure:
 
 Usage:
 - Local Ollama: `./scripts/run.sh llama3.1:8b prompts/001_extraction.txt`
-- Remote Ollama: set `OLLAMA_HOST=http://<host>:11434` or use `.env.win`
+- Remote Ollama: set `OLLAMA_HOST=http://<host>:11434`
+- Remote Ollama via `.env.win`: `OLLAMA_USE_ENV_WIN=1 ./scripts/run.sh llama3.1:8b prompts/001_extraction.txt`
 - Cloud comparison: `./scripts/run_cloud.sh prompts/001_extraction.txt`
 - Guided labs: start with `labs/README.md`
 

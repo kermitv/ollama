@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Optional target override: Mac-local default, Windows if .env.win exists
-if [ -f ".env.win" ]; then
+# Optional remote override: source .env.win only when explicitly requested
+if [ "${OLLAMA_USE_ENV_WIN:-0}" = "1" ] && [ -f ".env.win" ]; then
   # shellcheck disable=SC1091
   source .env.win
 fi

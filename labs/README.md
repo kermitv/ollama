@@ -2,6 +2,10 @@
 
 These labs are organized as a natural progression from setup to serving to model comparison and practical use.
 
+If your current goal is learning with local models on your Mac, stay local through Lab 06.
+Do not worry about the Windows environment yet.
+Treat the Windows/Tailscale path as an advanced follow-up only when you are ready to compare local and remote execution.
+
 Use the models already listed in the repo:
 
 - `phi3`
@@ -39,6 +43,20 @@ Each lab now includes:
 - common failure modes
 - exit criteria for moving forward
 
+## Local-Only Path First
+
+If you are learning local models right now, use this path:
+
+1. [Lab 00: Setup And Serving](./00_setup_and_serving.md)
+2. [Lab 01: General Chat](./01_general_chat.md)
+3. [Lab 02: Extraction](./02_extraction.md)
+4. [Lab 03: Coding](./03_coding.md)
+5. [Lab 04: Reasoning](./04_reasoning.md)
+6. [Lab 05: Simple Programs](./05_simple_programs.md)
+7. [Lab 06: Logic And Debugging](./06_logic_and_debugging.md)
+
+Only move to [Lab 07: Remote And Comparison](./07_remote_and_comparison.md) after you are comfortable with local runs.
+
 ## Terminal Entry Points
 
 Check serving:
@@ -72,8 +90,10 @@ Multi-model comparison:
 Remote host comparison:
 
 ```bash
-OLLAMA_HOST=http://<host>:11434 ./scripts/check_ollama.sh
-OLLAMA_HOST=http://<host>:11434 ./scripts/run_matrix.sh prompts/labs/07_remote_progression.txt
+source ./scripts/use_windows.sh
+./scripts/check_ollama.sh
+./scripts/run_matrix.sh prompts/labs/07_remote_progression.txt
+source ./scripts/use_local.sh
 ```
 
 ## What The Labs Teach
@@ -99,6 +119,12 @@ If you only want the shortest useful path, do:
 3. Lab 03
 4. Lab 06
 5. Lab 07
+
+## Windows Later
+
+When you are ready to use your Windows Ollama environment over Tailscale, use the separate guide:
+
+- [Windows Remote Guide](./windows_remote_guide.md)
 
 ## Comparison Rubric
 
